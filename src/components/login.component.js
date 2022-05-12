@@ -11,10 +11,8 @@ export default function Login () {
             let email = getValues("email");
             let password = getValues("password");
 
-            
             for(var i = 0, h = 0xdeadbeef; i < password.length; i++)
             h = Math.imul(h ^ password.charCodeAt(i), 2654435761);
-            
             let Password = (h ^ h >>> 16) >>> 0;
 
             if(getpassword() === Password) {
@@ -52,9 +50,7 @@ export default function Login () {
                           })}
                     />
                 </div>
-
                 <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={handlelogin}>Sign in</button>
-
             </form>
         );
     }

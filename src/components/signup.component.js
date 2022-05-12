@@ -11,14 +11,11 @@ export default function SignUp () {
             let email = getValues("email");
             let password = getValues("password");
 
-            
             for(var i = 0, h = 0xdeadbeef; i < password.length; i++)
             h = Math.imul(h ^ password.charCodeAt(i), 2654435761);
-            
             let Password = (h ^ h >>> 16) >>> 0;
 
             addtodata(email, Password);
-
             unregister("email");
             unregister("password");
             console.log("Form submitted");
