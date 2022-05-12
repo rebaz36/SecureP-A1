@@ -18,6 +18,9 @@ export default function Login () {
             if(getpassword() === Password) {
                 alert("Login Successful");
             }
+            else {
+                alert("Login Failed");
+            }
 
             unregister("email");
             unregister("password");
